@@ -1,9 +1,21 @@
 openapi: 3.1.0
 info:
   title: ProblemDetails
-  version: 1.0.0
-  description: |
+  version: 1.0.1
+  description: |-
     The sole purpose of this API definition is to expose the `ProblemDetails` DTO.
+
+
+    Other API definitions can **[include the `ProblemDetails` DTO by `$ref`erencing it](https://swagger.io/docs/specification/using-ref/)**.
+
+    ### Usage Example:
+
+    ```yaml
+        responses:
+          '400':
+            schema: 
+              $ref: 'https://raw.githubusercontent.com/patrickp-at-work/rfc7807-openapi/1.0.1/problemDetails.openapi.yml#/components/schemas/ProblemDetails'
+    ```
   contact:
     url: 'https://github.com/patrickp-at-work/rfc7807-openapi/'
     name: patrickp-at-work
